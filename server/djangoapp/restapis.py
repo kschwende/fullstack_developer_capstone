@@ -9,10 +9,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-backend_url = os.getenv('backend_url', default="http://localhost:3030")
-sentiment_analyzer_url = 
-    os.getenv('sentiment_analyzer_url',
-              default="http://localhost:5050/analyze/")
+d_url = "http://localhost:3030"
+sent_url = "http://localhost:5050/analyze/"
+backend_url = os.getenv('backend_url', default=d_url)
+sentiment_analyzer_url = os.getenv('sentiment_analyzer_url', default=sent_url)
 
 
 def get_request(endpoint, **kwargs):
